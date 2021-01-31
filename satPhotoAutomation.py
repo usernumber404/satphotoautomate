@@ -8,22 +8,25 @@ pathtodrive = '' #path to drive
 currentdateandtime = datetime.datetime.now()
 currentdateandtimestring = str(currentdateandtime)
 perminatefolder = 'projections'
-newfolder = pathtodrive + currentdateandtimestring
+newfolder = currentdateandtimestring
 
 
 def movefilesintofolder():
-    os.chdir(pathtodrive)
-    os.mkdir(newfolder)
     os.chdir(projectfolder)
+    os.mkdir(newfolder)
     for files in os.listdir():
             if files != perminatefolder:
                 shutil.move(files, newfolder)
 
 
-def checkifempty():
+
+def checkifemptythenmove():
     if len(os.listdir(newfolder)) == 0:
         os.remove(newfolder)
+    else:
+        shutil.move(newfolder, pathtodrive)
 
 
 movefilesintofolder()
-checkifempty()
+checkifemptythenmove()
+
