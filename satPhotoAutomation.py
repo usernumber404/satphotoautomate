@@ -3,8 +3,8 @@ import shutil
 import datetime
 
 
-projectfolder = '/Users/jaredparker1/Desktop/testfolder'
-pathtodrive = '/Users/jaredparker1/Google Drive/satphotos/'
+projectfolder = '' #path to folder
+pathtodrive = '' #path to drive
 currentdateandtime = datetime.datetime.now()
 currentdateandtimestring = str(currentdateandtime)
 perminatefolder = 'projections'
