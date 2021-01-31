@@ -29,3 +29,6 @@ def checkifemptythenmove():
 def main():
     movefilesintofolder()
     checkifemptythenmove()
+
+
+main()
